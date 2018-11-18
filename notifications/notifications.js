@@ -59,8 +59,8 @@ class Notification{
 	nextTip(way){
 		const active = document.querySelector('.active');
 		let activeIndex=active.getAttribute('value');
+		active.classList.remove('active');
 		if(way === 'toRight'){
-			active.classList.remove('active');
 			if (+activeIndex === this.elemArray.length) activeIndex = 0;
 			document.querySelector(`.radio-item:nth-child(${++activeIndex})`).classList.add('active');
 		}
